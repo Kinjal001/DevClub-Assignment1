@@ -1,0 +1,357 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.grow{
+    transition: transform .4s ease-in-out;
+}
+.grow:hover{
+    transform: scale(1.2);
+}
+
+.nav{
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    width: 100%;
+    height: 5vw;
+    min-height: 4vw;
+    background-color: #4c0126;
+    justify-content: center;
+    padding-left: 20px;
+}
+.navcont{
+    width: 70%;
+    min-width: 360px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navlink{
+    align-items: center;
+    display: flex;
+    min-width: 60px;
+    height: parent;
+}
+
+.navlink a{
+    color: #fccde7;
+    text-overflow: hidden;
+    text-decoration: none;
+    font-size: 2vw;
+}
+
+
+.home{
+    z-index: 1;
+    display:flex;
+    flex-flow: column;
+    width: calc(100% - 10vw);
+    background-color: #4c0126;
+    padding: 5vw;
+}
+
+.home p{
+    width: 45vw;
+    display: flex;
+    position: relative;
+}
+
+.htop{
+    color: #e8afce;
+    font-size: 3vw;
+    margin: 5vw 0px 0vw 0px;
+    /* margin-bottom: 20px; */
+}
+
+.hmain{
+    color: white;
+    font-size: 5vw;
+    margin: 0px 0px 7vw 0px;
+}
+
+.himg{
+    width: 30vw;
+    position: absolute;
+    right: 5vw;
+}
+
+.tips{
+    display: flex;
+    width: calc(100%-8vw);
+    padding: 4vw;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.thead{
+    display: flex;
+    /* justify-self: center; */
+    margin: auto;
+}
+
+.theadtext{
+    font-size: 4vw;
+    color: #4c0126;
+}
+
+.tbox{
+    margin: auto;
+    display: flex;
+    width: calc(100% - 12vw);
+    padding: 2vw;
+    border: 1px solid #4c0126;
+    margin-bottom: 3vw;
+    border-radius: 1vw;
+}
+
+.tbox img{
+    display: flex;
+    width:20%;
+}
+
+.ttext{
+    flex-flow: column;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.tmaskhead{
+    display: flex;
+    font-size: 3vw;
+    margin: auto;
+}
+
+.tmaskhead:hover+.tmask{
+    opacity: 1;
+}
+
+.tmask{
+    opacity: 0;
+    margin: auto;
+    font-size: 1.5vw;
+    transition: opacity 1s ease-in-out;
+}
+
+.twashhead{
+    display: flex;
+    font-size: 3vw;
+    margin: auto;
+}
+
+.twashhead:hover+.twash{
+    opacity: 1;
+}
+
+.twash{
+    text-align: center;
+    opacity: 0;
+    margin: auto;
+    font-size: 1.5vw;
+    transition: opacity 1s ease-in-out;
+}
+
+.symptoms{
+    background-color: #e8afce;
+    padding: 5vw;
+    width: calc(100%-10vw);
+    display: flex;
+    justify-self: center;
+    flex-flow: column;
+}
+
+.simphead{
+    margin: auto;
+    margin-bottom: 3vw;
+}
+
+.simphead h1{
+    font-size: 4vw; 
+    color: #4c0126;
+}
+
+.simptable{
+    margin:auto;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+th, td{
+    border: 0.3vw solid #4c0126;
+    padding: 1vw;
+    background-color: white;
+    font-size: 2vw;
+}
+
+.faq{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 5vw;
+}
+
+.faqhead{
+    margin: auto;
+    margin-bottom: 3vw;
+}
+
+.faqhead h1{
+    color: #4c0126;
+    font-size: 4vw;
+}
+
+.card{
+    display: flex;
+    width: 100%;
+    flex-flow: column;
+    position: relative;
+}
+
+.flip-card {
+    display: flex;
+    z-index: 0;
+    background-color: transparent;
+    height: 15vw;
+    margin: 1vw;
+    border: 1px solid #4c0126;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+
+.flip-card-medium {
+    display: flex;
+    z-index: 0;
+    background-color: transparent;
+    height: 12vw;
+    margin: 1vw;
+    border: 1px solid #4c0126;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.flip-card-small {
+    display: flex;
+    z-index: 0;
+    background-color: transparent;
+    height: 10vw;
+    margin: 1vw;
+    border: 1px solid #4c0126;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateX(-180deg);
+}
+
+.flip-card-medium:hover .flip-card-inner {
+    transform: rotateX(-180deg);
+}
+
+.flip-card-small:hover .flip-card-inner {
+    transform: rotateX(-180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    display: flex;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+    background-color: #750451;
+    color: white;
+    
+}
+
+.flip-card-front h3{
+    margin: auto;
+    font-size: 2.5vw;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: #e8afce;
+    color: #560430;
+    transform: rotateX(-180deg);
+}
+
+.flip-card-back p{
+    padding: 1vw;
+    font-size: 1.5vw;
+}
+
+.youtube{
+    display: flex;
+    padding: 5vw;
+    width: calc(100%-10vw);
+    flex-flow: column;
+    justify-content: center;
+    background-color: #560430;
+}
+
+.ythead{
+    display: flex;
+    margin: auto;
+    margin-bottom: 3vw;
+}
+
+.ythead h1{
+    color: white;
+    font-size: 4vw;
+}
+
+.ytvideo{
+    display: flex;
+    width: inherit;
+    margin: auto;
+}
+
+.contact{
+    background-color: #4c0126;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    padding: 2vw 0px;
+    justify-content: center;
+}
+
+.contact a{
+    display: flex;
+    margin: auto;
+    text-decoration: none;
+    color: #e8afce;
+}
+
+#cont1{
+    font-size: 2vw;
+    margin-bottom: 1vw;
+}
+
+#cont2{
+    font-size: 1vw;
+}
